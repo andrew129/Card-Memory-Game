@@ -46,7 +46,6 @@ class Game extends React.Component {
     }
 
     scoreSubmit = name => {
-        console.log(this.state.scoreList)
         if (this.state.scoreList.length > 10) {
             var lastItem = this.state.scoreList[this.state.scoreList.length - 1]
             if (lastItem.score > this.state.points) {
@@ -63,7 +62,6 @@ class Game extends React.Component {
                 localStorage.setItem(name, this.state.points)
             }
         }
-        console.log(localStorage)
     }
 
     retrieveItems = () => {
@@ -71,17 +69,15 @@ class Game extends React.Component {
         const scoreArr = []
         
         storageKeys.forEach(key => {
-            const values = localStorage.getItem(key)
-            console.log(values)
+            const value = localStorage.getItem(key)
             let scoreObj = {}
             scoreObj.name = key
-            scoreObj.score = values
+            scoreObj.score = value
             scoreArr.push(scoreObj)
         })
         this.setState({
             scoreList: scoreArr
         })
-        console.log(storageKeys)
     }
 
     handleClickedImage = id => {
@@ -129,7 +125,7 @@ class Game extends React.Component {
         const sortedArray = this.state.scoreList.sort((a, b) => b.score - a.score)
         return (
             <div>
-                <header class='header' style={{background: '#00ff00', height: 60, display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', borderBottom: 'solid 1px white'}}>
+                <header className='header' style={{background: '#00ff00', height: 60, display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', borderBottom: 'solid 1px white'}}>
                     <h2>Time: {this.state.seconds}</h2>
                     <h1>Card Flip Game</h1>
                     <h2>Points: {this.state.points}</h2>
