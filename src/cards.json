@@ -1,0 +1,98 @@
+[
+    {
+       "id": 1,
+       "image": "../images/pic1.jpg",
+       "clicked": false,
+       "animate": false
+    },
+    {
+        "id": 2,
+        "image": "../images/pic2.JPG",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 3,
+        "image": "../images/pic3.jpg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 4,
+        "image": "../images/pic4.jpg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 5,
+        "image": "../images/andrew-cafe.jpg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 6,
+        "image": "../images/beach-sunset.jpg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 7,
+        "image": "../images/demoday.jpeg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 8,
+        "image": "../images/image1.jpeg",
+        "clicked": false,
+        "animate": false
+    },
+    {
+        "id": 9,
+        "image": "../images/pic1.jpg",
+        "clicked": false,
+        "animate": false
+     },
+     {
+         "id": 10,
+         "image": "../images/pic2.JPG",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 11,
+         "image": "../images/pic3.jpg",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 12,
+         "image": "../images/pic4.jpg",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 13,
+         "image": "../images/andrew-cafe.jpg",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 14,
+         "image": "../images/beach-sunset.jpg",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 15,
+         "image": "../images/demoday.jpeg",
+         "clicked": false,
+         "animate": false
+     },
+     {
+         "id": 16,
+         "image": "../images/image1.jpeg",
+         "clicked": false,
+         "animate": false
+     }
+]

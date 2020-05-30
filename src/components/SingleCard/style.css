@@ -1,0 +1,35 @@
+#card {
+    background: blue;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 12px 10px 41px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 10px 41px 5px rgba(0,0,0,0.75);
+    box-shadow: 12px 10px 41px 5px rgba(0,0,0,0.75); 
+    cursor: pointer;
+}
+
+.animate {
+    animation: flipper 1s 1;
+}
+
+@keyframes flipper {
+    0%{transform: rotateY(0deg)}
+    100%{transform: rotateY(180deg)}
+}
+
+@keyframes increase {
+    0%{box-shadow: -2px 2px 20px 5px #00ff00;}
+    50%{box-shadow: -2px 2px 20px 5px #ff7011;}
+    100%{box-shadow: -2px 2px 41px 5px #00ff00;}
+}
+
+#card:hover {
+    transform: translateY(3px);
+    animation: increase 3s infinite forwards alternate;
+}
+
+#question {
+    text-shadow: 0px 0px 5px #00ff00, 0px 0px 5px #00ff00, 0px 0px 5px #00ff00;
+}
