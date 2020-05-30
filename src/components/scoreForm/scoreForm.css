@@ -1,0 +1,50 @@
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding: 10px;
+    margin-right: 100px;
+    background: grey;
+    border-radius: 15px;
+    margin-left: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+}
+
+#name {
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid black;
+    outline: none;
+}
+
+#submit-btn {
+    border-radius: 10px;
+    background: #00ff00;
+    color: black;
+    padding: 10px;
+    width: 400px;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#submit-btn:hover {
+    background: #08b908;
+    color: white;
+}
+
+#my-score {
+    color: #00ff00;
+    align-self: center;
+}

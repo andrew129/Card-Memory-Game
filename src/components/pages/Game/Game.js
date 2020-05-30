@@ -10,7 +10,7 @@ class Game extends React.Component {
         cardArr: [],
         points: 0,
         gameStart: false, //change when you click on the start button
-        seconds: 30,
+        seconds: 5,
         formShow: false,
         scoreList: []
     }

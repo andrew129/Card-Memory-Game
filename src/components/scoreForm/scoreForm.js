@@ -1,4 +1,5 @@
 import React from 'react';
+import './scoreForm.css';
 
 export default class scoreForm extends React.Component {
 
@@ -16,10 +17,11 @@ export default class scoreForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='form-div'>
                 <form onSubmit={this.formSubmit}>
-                    <input placeholder='Enter Your Name...' type='text' onChange={e => this.setState({ name: e.target.value })} value={this.state.name} />
-                    <button>Submit Score</button>
+                    <h2 id='my-score'>Enter Your Name</h2>
+                    <input id='name' placeholder='Enter Your Name...' type='text' onChange={e => this.setState({ name: e.target.value })} value={this.state.name} />
+                    <button id='submit-btn'>Submit Score</button>
                 </form>
             </div>
         )
