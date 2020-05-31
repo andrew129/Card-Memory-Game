@@ -108,7 +108,7 @@ class Game extends React.Component {
             setTimeout(() => {
                 arr[0].clicked = false
                 arr[1].clicked = false
-            }, 300)
+            }, 400)
         }
     }
 
