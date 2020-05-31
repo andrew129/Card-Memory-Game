@@ -10,7 +10,7 @@ class Game extends React.Component {
         cardArr: [],
         points: 0,
         gameStart: false, //change when you click on the start button
-        seconds: 5,
+        seconds: 15,
         formShow: false,
         scoreList: []
     }
@@ -82,17 +82,15 @@ class Game extends React.Component {
 
     handleClickedImage = id => {
         const filteredCard = this.state.pics.filter(pic => pic.id === id)
-        filteredCard[0].animate = true
-            filteredCard[0].animate = false
-            filteredCard[0].clicked = true
-            // callback so the new state can be used immediately
-            this.setState({
-                cardArr: [...this.state.cardArr, filteredCard[0]]
-            }, () => {
-                if (this.state.cardArr.length === 2) {
-                    this.checkForMatch(this.state.cardArr)
-                }
-            })
+        filteredCard[0].clicked = true
+        // callback so the new state can be used immediately
+        this.setState({
+            cardArr: [...this.state.cardArr, filteredCard[0]]
+        }, () => {
+            if (this.state.cardArr.length === 2) {
+                this.checkForMatch(this.state.cardArr)
+            }
+        })
     }
 
     checkForMatch = arr => {
@@ -104,11 +102,13 @@ class Game extends React.Component {
             })
         }
         else {
-            arr[0].clicked = false
-            arr[1].clicked = false
             this.setState({
                 cardArr: []
             })
+            setTimeout(() => {
+                arr[0].clicked = false
+                arr[1].clicked = false
+            }, 300)
         }
     }
 
@@ -136,6 +136,7 @@ class Game extends React.Component {
                         <CardList 
                             pics={this.state.pics}
                             onClick={this.handleClickedImage}
+                            clicked={this.state.clicked}
                         />
                     }
                     {(!this.state.gameStart && !this.state.formShow) &&
