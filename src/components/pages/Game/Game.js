@@ -10,9 +10,10 @@ class Game extends React.Component {
         cardArr: [],
         points: 0,
         gameStart: false, //change when you click on the start button
-        seconds: 15,
+        seconds: 30,
         formShow: false,
-        scoreList: []
+        scoreList: [],
+        isFlipped: false
     }
 
     componentDidMount() {
@@ -81,7 +82,9 @@ class Game extends React.Component {
     }
 
     handleClickedImage = id => {
+        // this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
         const filteredCard = this.state.pics.filter(pic => pic.id === id)
+
         filteredCard[0].clicked = true
         // callback so the new state can be used immediately
         this.setState({
@@ -106,9 +109,10 @@ class Game extends React.Component {
                 cardArr: []
             })
             setTimeout(() => {
+                // this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
                 arr[0].clicked = false
                 arr[1].clicked = false
-            }, 400)
+            }, 600)
         }
     }
 
@@ -162,7 +166,7 @@ class Game extends React.Component {
                                     <th>Score</th>
                                 </tr>
                                 {sortedArray.map(score => (
-                                    <tr>
+                                    <tr key={score.name}>
                                         <td><strong>{score.name}</strong></td>
                                         <td><strong>{score.score} Points</strong></td>
                                     </tr>
